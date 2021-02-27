@@ -1,0 +1,136 @@
+/* -------------------------------------------------- Page Structure */
+
+#page7Frame {
+	background-image: url("images/unlock-your-offer_lowRes.jpg");
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+}
+
+#page7Frame .popupButton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #C0A874;
+	border-color: #B79256;
+	border-radius: 0px;
+	color: white;
+	border-style: none;
+	padding: 0px;
+	height: 6vh;
+}
+
+#page7Frame .popupButton:hover {
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+	cursor: pointer;
+}
+
+#page7Frame .popupButton p {
+	margin: 0.5em;
+	font-size: 2vmin;
+}
+
+#page7Frame .whiteButtonBox {
+	height: 100%;
+	background-color: white;
+	color: #071b44;
+	height: 6vh;
+	width: 6vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page7Frame .whiteButtonBox img {
+	width: 3vh;
+}
+
+#page7BackButton {
+	display: none;
+}
+
+/* ------------------------------------------------- Media */
+
+#page7Frame .headerLogo {
+	height: 20%;
+	margin-right: 1.5%;
+}
+
+#page7Frame h1 {
+	color: white;
+	font-size: 3em;
+	text-align: center;
+}
+
+#page7Frame .iframeRelative {
+	width: 55vw;
+	height: 30.9375vw;
+}
+
+/* ------------------------------------------------- Text */
+
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	#page7Frame {
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	#page7Frame .headerLogo {
+		opacity: 0;
+		height: 15%;
+	}
+
+	#page7Frame .popupButton {
+		width: 50vw;
+		height: 8vh;
+	}
+
+	#page7Frame .whiteButtonBox {
+		width: 8vh;
+		height: 8vh;
+	}
+
+	#page7Frame .popupButton p {
+		font-size: 4vmin;
+	}
+
+	#page7Frame h1 {
+		font-size: 4.5em;
+		width: 70vw;
+	}
+
+	#page7Frame .popup {
+		position: fixed;
+		height: 100vh;
+		justify-content: center;
+		background-color: rgba(7, 27, 68, 0.92);
+	}
+
+	#page7Frame .iframeRelative {
+		width: 70vw;
+		height: 39.375vw;
+	}
+
+	#page7Frame #page7BackButton {
+		display: block;
+		color: white;
+		font-size: 7vmin;
+	}
+
+	#page7Frame .goldButtonBox {
+		display: none;
+	}
+}

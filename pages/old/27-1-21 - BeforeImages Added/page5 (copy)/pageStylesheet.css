@@ -1,0 +1,167 @@
+/* -------------------------------------------------- Page Structure */
+
+#page5Frame {
+	background-color: red;	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+#page5Frame .topbar {
+	height: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f1ede1;
+	padding-right: 3vw;
+}
+
+#page5Frame .content {
+	height: 70%;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 2vw;
+	background-color: white;
+}
+
+#page5Frame .box6 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 25%;
+}
+
+#page5Frame .box6Text {
+	width: 100%;
+	height: 2em;
+	text-align: center;
+}
+
+#page5Frame .topHeader {
+	width: 100%;
+	height: 20vh;
+	background-color: #071b44;
+	display: flex;
+	align-items: center;
+	padding: 2vw;
+	color: white;
+	flex-basis: 40%;
+}
+
+#page5Frame .topTitle {
+	display: flex;
+	flex-direction: column;
+	padding: 2vw;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+/* ------------------------------------------------- Media */
+
+#page5Frame .iframeRelative {
+	width: 40vw;
+	height: 22.5vw;
+	margin-bottom: 3vw;
+}
+
+#page5Frame .box6 img {
+	width: 80%;
+	margin-bottom: 5vh;
+}
+
+#page5Frame .box6 img:hover {
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+}
+
+#sideHeaderLogo {
+	height: 50%;
+}
+
+/* ------------------------------------------------- Text */
+
+#page5Frame .box6 a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#page5Frame h3 {
+	color: black;
+}
+
+#page5Frame h1 {
+	text-align: center;
+	color: #071B44;
+}
+
+#page5Frame .topbar p {
+	width: 80%;
+	color: #071B44;
+}
+
+#page5Frame .topHeader h1 {
+	color: white;
+}
+
+#page5Frame .topTitle h2 {
+	margin-bottom: 3vh;
+}
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	#page5Frame {
+		flex-direction: column;
+	} 
+	  
+	#page5Frame .topbar {
+		flex-direction: column;
+		flex-basis: auto;
+		padding-bottom: 3vw;
+	}
+	  
+	#page5Frame .topbar {
+		padding-right: 0px;
+	}
+	  
+	#page5Frame .content {
+		flex-direction: column;
+		align-items: center;
+		padding-top: 5vh;
+	}
+	  
+	#page5Frame .box6 {
+		width: 70%;
+	}
+	  
+	#page5Frame .topHeader h1 {
+		padding-left: 5%;	
+	}
+	  
+	#page5Frame h2 {
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+		padding-left: 5%;
+	}
+	
+	#page5Frame .topHeader {
+		flex-basis: auto;	
+	}
+	  
+	#page5Frame .box6 img {
+		width: 80%;	
+	}
+	  
+	#page5Frame .topbar p {
+		padding-left: 5%;
+	}
+}

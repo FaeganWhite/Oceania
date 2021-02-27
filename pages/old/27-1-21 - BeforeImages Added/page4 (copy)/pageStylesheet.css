@@ -1,0 +1,225 @@
+/* -------------------------------------------------- Page Structure */
+
+#page4Frame {
+	background-color: red;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100%;
+}
+
+#page4Frame .sidebar {
+	flex-basis: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f1ede1;
+	padding-bottom: 3vw;
+}
+
+#page4Frame .content {
+	flex-basis: 75%;
+	background-color: white;
+}
+
+#page4Frame .sideHeader {
+	width: 100%;
+	height: 20vh;
+	background-color: #071b44;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+#page4Frame .sideTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5vh;
+	width: 100%;
+}
+
+/* ------------------------------------------------- Media */
+
+#page4Frame .sidebar .iframeRelative {
+	width: 80%;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+}
+
+/* ------------------------------------------------- Text */
+
+#page4Frame h1 {
+	text-align: left;
+	color: #071B44;
+}
+
+#page4Frame .sideTitle h2 {
+	margin-bottom: 3vh;
+	width: 80%;
+	text-align: left;
+}
+
+#page4Frame .sidebar p {
+	width: 80%;
+	color: black;
+}
+
+#page4Frame .sideHeader h1 {
+	color: white;
+	width: 80%;
+}
+
+#page4Frame h3 {
+	color: black;	
+}
+
+#page4Frame .popup h3 {
+	color: white;	
+}
+
+/* ------------------------------------------------ Map */
+
+#mapContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #D9E7F2;
+}
+
+#map {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+#mapImage {
+	width: 85%;
+	height: auto;
+}
+
+.dot {
+	width: 7vw;
+    height: 7vw;
+	background-color: rgba(7, 27, 68, 0.7);
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1000;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1vw;
+}
+
+.dot p {
+	margin: auto;
+	text-align: center;
+	font-size: 0.7vw;
+	color: white;
+	pointer-events: none;
+		-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Fire*/
+}
+
+.dot:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+	box-shadow: 0em 0em 0.2em 0.2em rgba(0, 0, 0, 0.05);
+	background-color: rgba(7, 27, 68, 0.85);
+}
+
+#dotAlaska {
+	top: 6vw;
+	left: 5vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotCarribean {
+	top: 20vw;
+	left: 17vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotCanadaNewEngland {
+	top: 11vw;
+	left: 20vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotSouthAmerica {
+	top: 31vw;
+	left: 22vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotMed {
+	top: 13vw;
+	left: 32vw;
+	height: 5vw;
+	width: 5vw;
+}
+
+#dotBaltic {
+	top: 11vw;
+	left: 38vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotAfrica {
+	top: 28vw;
+	left: 37vw;
+	height: 7vw;
+	width: 7vw;
+}
+
+#dotAsia {
+	top: 20vw;
+	left: 54vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotAus {
+	top: 32vw;
+	left: 60vw;
+	height: 7vw;
+	width: 7vw;
+}
+
+#dotSouthPacific {
+	top: 24vw;
+	left: 62vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	#page4Frame {
+		flex-direction: column;
+	}  
+}

@@ -1,0 +1,133 @@
+/* -------------------------------------------------- Page Structure */
+
+#page1Frame {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 3000;
+}
+
+#page1Frame .sidebar {
+	flex-basis: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #071b44;
+	padding-bottom: 3vw;
+	color: white;
+}
+
+#page1Frame .content {
+	flex-basis: 60%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	padding: 2vw;
+	column-gap: 2vw;
+	row-gap: 2vw;
+	background-color: white;
+}
+
+#page1Frame .box6 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;;
+}
+
+#page1Frame .box6Text {
+	width: 100%;
+	height: 2em;
+	text-align: center;
+	color: black;
+}
+
+#page1Frame .sideHeader {
+	width: 100%;
+	height: 20vh;
+	background-color: #071b44;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+/* ------------------------------------------------- Media */
+
+#page1Frame .iframeRelative {
+	width: 90%;
+	height: 30vh;
+}
+
+#page1Frame .box6 img {
+	width: 40%;
+	margin-bottom: 3vh;
+}
+
+#page1Frame .box6 img:hover {
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+}
+
+#sideHeaderLogo {
+	height: 50%;
+}
+
+/* overlays */
+
+img::hover {
+	content: url(image.jpg);
+  }
+
+/* ------------------------------------------------- Text */
+
+#page1Frame .box6 a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#page1Frame h1 {
+	text-align: center;
+	color: #071B44;
+}
+
+#page1Frame .sidebar p {
+	width: 80%;
+	color: white;
+	margin-top: 2vh;
+}
+
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	#page1Frame {
+		flex-direction: column;
+	}  
+	  
+	#page1Frame .content {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		padding-top: 5vh;
+	}
+	  
+	#page1Frame .box6 {
+		width: 70%;
+		margin: auto;
+	}
+	  
+	#page1Frame h2 {
+    	margin-top: 3vh;
+    	margin-bottom: 3vh;
+	}
+}

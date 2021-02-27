@@ -1,0 +1,140 @@
+/* -------------------------------------------------- Page Structure */
+
+#page3Frame {
+	background-color: red;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100%;
+}
+
+#page3Frame .sidebar {
+	flex-basis: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f1ede1;
+	padding-bottom: 3vw;
+}
+
+#page3Frame .content {
+	flex-basis: 60%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding: 2vw;
+	column-gap: 2vw;
+	row-gap: 2vw;
+	background-color: white;
+}
+
+#page3Frame .box4 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#page3Frame .imageLink {
+	height: 60%;
+	width: 65%;
+}
+
+#page3Frame .box4Text {
+	width: 100%;
+	height: 2em;
+	text-align: center;
+}
+
+#page3Frame .sideHeader {
+	width: 100%;
+	height: 30vh;
+	background-color: #071b44;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+#page3Frame .sideTitle{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5vh;
+}
+
+/* ------------------------------------------------- Media */
+
+#page3Frame .iframeRelative {
+	width: 55vw;
+	height: 30.9375vw;
+}
+
+#page3Frame .box4 a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#page3Frame .imageContainer {
+	height: 27vh;
+	position: relative;
+}
+
+#page3Frame .boxImage {
+	position: absolute;
+	width : 100%;
+}
+
+/* ------------------------------------------------- Text */
+
+#page3Frame .box4 a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#page3Frame h1 {
+	text-align: left;
+	color: #071B44;
+	
+}
+
+#page3Frame .sideTitle h2 {
+	margin-bottom: 3vh;
+	width: 80%;
+	text-align: left;
+}
+
+#page3Frame .sidebar p {
+	width: 80%;
+	color: black;
+}
+
+#page3Frame .sideHeader h1 {
+	color: white;
+}
+
+#page3Frame h3 {
+	color: black;	
+}
+#page3Frame .popup h3 {
+	color: white;	
+}
+
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	#page3Frame {
+		flex-direction: column;
+	}  
+}

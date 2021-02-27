@@ -1,0 +1,409 @@
+/* -------------------------------------------------- Page Structure */
+
+#page4Frame {
+	background-color: red;	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 100%;
+}
+
+#page4Frame .sidebar {
+	flex-basis: 25%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #f1ede1;
+	padding-bottom: 3vw;
+}
+
+#page4Frame .content {
+	flex-basis: 75%;
+	background-color: white;
+}
+
+#page4Frame .sideHeader {
+	width: 100%;
+	height: 30vh;
+	background-color: #071b44;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+#page4Frame .sideTitle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5vh;
+	width: 100%;
+}
+
+/* ------------------------------------------------- Media */
+
+#page4Frame .popupContent .iframeRelative {
+	width: 55vw;
+	height: 30.9375vw;
+}
+
+#page4Frame .sidebar .vidImageIcon {
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+	width: 80%;
+}
+
+/* ------------------------------------------------- Text */
+
+#page4Frame h1 {
+	text-align: left;
+	color: #071B44;
+}
+
+#page4Frame .sideTitle h2 {
+	margin-bottom: 3vh;
+	width: 80%;
+	text-align: left;
+}
+
+#page4Frame .sidebar p {
+	width: 90%;
+	color: black;
+}
+
+#page4Frame .sidebar .popup p {
+	color: white;
+}
+
+#page4Frame .sidebar .popup .popupBackButton p {
+	color: #B79256;
+}
+
+#page4Frame .sidebar .popup .popupBackButton .goldButtonBox p {
+	color: white;
+	width: auto;
+}
+
+#page4Frame .sideHeader h1 {
+	color: white;
+	width: 80%;
+}
+
+#page4Frame h3 {
+	color: black;	
+}
+
+#page4Frame .popup h3 {
+	color: white;	
+}
+
+/* ------------------------------------------------ Map */
+
+#mapContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #D9E7F2;
+}
+
+#map {
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+#mapImage {
+	width: 85%;
+	height: auto;
+}
+
+.dot {
+	width: 7vw;
+    height: 7vw;
+	background-color: rgba(7, 27, 68, 0.7);
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1000;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1vw;
+}
+
+.dot p {
+	margin: auto;
+	text-align: center;
+	font-size: 0.7vw;
+	color: white;
+	pointer-events: none;
+		-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Fire*/
+}
+
+.dot:hover {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+	box-shadow: 0em 0em 0.2em 0.2em rgba(0, 0, 0, 0.05);
+	background-color: rgba(7, 27, 68, 0.85);
+}
+
+#dotAlaska {
+	top: 6vw;
+	left: 5vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotCaribbean {
+	top: 19vw;
+	left: 17vw;
+	height: 7vw;
+	width: 7vw;
+}
+
+#dotCanadaNewEngland {
+	top: 11vw;
+	left: 20vw;
+	height: 6.5vw;
+	width: 6.5vw;
+}
+
+#dotSouthAmerica {
+	top: 31vw;
+	left: 22vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotMed {
+	top: 12vw;
+	left: 31vw;
+	height: 6.5vw;
+	width: 6.5vw;
+}
+
+#dotBaltic {
+	top: 11vw;
+	left: 38vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotAfrica {
+	top: 28vw;
+	left: 37vw;
+	height: 7vw;
+	width: 7vw;
+}
+
+#dotAsia {
+	top: 20vw;
+	left: 54vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+#dotAus {
+	top: 32vw;
+	left: 60vw;
+	height: 7vw;
+	width: 7vw;
+}
+
+#dotSouthPacific {
+	top: 24vw;
+	left: 62vw;
+	height: 6vw;
+	width: 6vw;
+}
+
+
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	#page4Frame h1 {
+		text-align: center;
+	}
+
+	#page4Frame .sideHeader {
+		height: auto;
+	}
+
+	#page4Frame .sidebar {
+		padding-bottom: 0vh;
+	}
+
+	#page4Frame .sideHeader h1 {
+		margin-top: 12vh;
+		margin-bottom: 2vh;
+	}
+
+	#page4Frame {
+		flex-direction: column;
+	}  
+
+	#map {
+		position: static;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 2vh;
+	}
+
+	#mapImage {
+		display: none;
+	}
+
+	.dot {
+		position: static;
+		border-radius: 0px;
+		width: 80%;
+		margin-bottom: 2vh;
+		height: 10vh;
+		background-color: white;
+		border-style: solid;
+		border-color: #B79256;
+		border-width: 5px;
+		justify-content: flex-start;
+		box-shadow: 5px 5px 10px #aaaaaa;
+	}
+
+	.dot p {
+		color: black;
+		margin-left: 2vh;
+	}
+
+	.dot:hover {
+		-webkit-transform:scale(1);
+		transform:scale(1);
+		box-shadow: 0em 0em 0.2em 0.2em rgba(0, 0, 0, 0.05);
+		background-color: rgba(74, 107, 133, 0.7);
+		box-shadow: 5px 5px 10px #aaaaaa;
+	}
+
+	#dotAlaska {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotCaribbean {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotCanadaNewEngland {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotSouthAmerica {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotMed {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotBaltic {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotAfrica {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotAsia {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotAus {
+		height: 10vh;
+		width: 80%;
+	}
+	
+	#dotSouthPacific {
+		height: 10vh;
+		width: 80%;
+	}
+
+	#mapContainer {
+		background-color: white;
+	}
+
+	.dot p {
+		font-size: 5vmin;
+	}
+
+	#page4Frame .popup {
+		margin-bottom: 2vh;
+	}
+
+	#page4Frame .sidebar .popup {
+		background-color: #f1ede1;
+		color: black;
+		margin-bottom: 0vh;
+	}
+
+	#page4Frame .sidebar .popup h3 {
+		color: black;
+	}
+
+	#page4Frame .sidebar .popup p {
+		color: black;
+		width: 100%;
+	}
+
+	#page4Frame .popup .iframeRelative {
+		width: 70vw;
+		height: 39.375vw;
+	}
+
+	#page4Frame .sidebar .popupTitle {
+		height: auto;
+	}
+
+	#page4Frame .sidebar .popup h2 {
+		color: black;
+		padding-left: 0px;
+		width: 70%;
+		padding-top: 2vh;
+		padding-bottom: 1vh;
+		font-weight: normal;
+	}
+
+	#page4Frame .sidebar .popup h3 {
+		font-weight: normal;
+	}
+
+	#page4Frame .sidebar p {
+		display: none;
+	}
+
+	#page4Frame .sidebar .sideTitle p {
+		display: block;
+	}
+
+	#page4Frave .popupBackButton {
+		margin-right: 0px;
+	}
+}

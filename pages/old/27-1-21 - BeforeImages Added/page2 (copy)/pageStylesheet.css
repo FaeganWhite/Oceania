@@ -1,0 +1,168 @@
+/* -------------------------------------------------- Page Structure */
+
+#page2Frame {
+	background-color: white;	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+#page2Frame .topbar {
+	height: 30%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f1ede1;
+	padding-right: 3vw;
+}
+
+#page2Frame .content {
+	height: 70%;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 2vw;
+	column-gap: 2vw;
+	row-gap: 2vw;
+	background-color: white;
+}
+
+#page2Frame .box4 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	width: 25%;
+}
+
+#page2Frame .box4Text {
+	width: 100%;
+	height: 2em;
+	text-align: center;
+	color: black;
+}
+
+#page2Frame .topHeader {
+	width: 100%;
+	height: 20vh;
+	background-color: #071b44;
+	display: flex;
+	align-items: center;
+	padding: 2vw;
+	color: white;
+	flex-basis: 40%;
+}
+
+#page2Frame .topTitle {
+	display: flex;
+	flex-direction: column;
+	padding: 2vw;
+	align-items: flex-start;
+	justify-content: center;
+	padding-left: 3vw;
+}
+
+/* ------------------------------------------------- Media */
+
+#page2Frame .iframeRelative {
+	width: 55vw;
+	height: 30.9375vw;
+	margin-bottom: 3vw;
+}
+
+#page2Frame .box4 img {
+	width: 60%;
+	margin-bottom: 3vh;
+}
+
+#page2Frame .box4 img:hover {
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+}
+
+#sideHeaderLogo {
+	height: 50%;
+}
+
+/* ------------------------------------------------- Text */
+
+#page2Frame .box4 a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#page2Frame h1 {
+	text-align: center;
+	color: #071B44;
+}
+
+#page2Frame .topbar p {
+	width: 80%;
+	color: #071B44;
+}
+
+#page2Frame .topHeader h1 {
+	color: white;
+}
+
+#page2Frame .topTitle h2 {
+	margin-bottom: 3vh;
+	color: black;
+}
+/* ------------------------------------------------ Responsive Design */
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+	#page2Frame {
+		flex-direction: column;
+	} 
+	  
+	#page2Frame .topbar {
+		flex-direction: column;
+		flex-basis: auto;
+		padding-bottom: 3vw;
+	}
+	  
+	#page2Frame .topbar {
+		padding-right: 0px;
+	}
+	  
+	#page2Frame .content {
+		flex-direction: column;
+		align-items: center;
+		padding-top: 5vh;
+	}
+	  
+	#page2Frame .box4 {
+		width: 70%;
+	}
+	  
+	#page2Frame .topHeader h1 {
+		padding-left: 5%;	
+	}
+	  
+	#page2Frame h2 {
+		padding-top: 3vh;
+		padding-bottom: 3vh;
+		padding-left: 5%;
+	}
+	
+	#page2Frame .topHeader {
+		flex-basis: auto;	
+	}
+	  
+	#page2Frame .box4 img {
+		width: 80%;	
+	}
+	  
+	#page2Frame .topbar p {
+		padding-left: 5%;
+	}
+}

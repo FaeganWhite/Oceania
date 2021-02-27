@@ -1,0 +1,929 @@
+
+/* ------------------------------------------------------------------------------------------------------------ Import the fonts */
+
+@font-face {
+	font-family: 'Optima';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima'), url('fonts/OPTIMA.woff') format('woff');
+}  
+
+@font-face {
+    font-family: 'Optima Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima Italic'), url('fonts/Optima_Italic.woff') format('woff');
+}
+    
+@font-face {
+    font-family: 'Optima Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima Medium'), url('fonts/Optima Medium.woff') format('woff');
+}
+    
+@font-face {
+    font-family: 'Optima Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima Bold'), url('fonts/OPTIMA_B.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Garamond';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Garamond'), url('fonts/garamond.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Medium'), url('fonts/Avenir-Medium.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Avenir Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir Book'), url('fonts/Avenir-Book.ttf') format('ttf');
+}
+
+/* Set the fonts */
+
+body {
+	font-family: 'Optima', Fallback, sans-serif;
+	font-size: 2vmin;
+}
+
+button {
+	font-family: 'Optima', Fallback, sans-serif;
+	font-size: 1.8vmin;
+}
+
+h1 {
+	font-family: 'Garamond', Fallback, sans-serif;
+}
+
+h2, h3, h4, h5 {
+	font-family: 'Optima', Fallback, sans-serif;
+}
+
+h1 {
+	font-size: 2vmax;
+}
+
+h2 {
+	font-size: 1.5vmax;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.2vmax;
+}
+
+h4 {
+	font-size: 1vmax;
+}
+
+h5 {
+	font-size: 0.8vmax;
+}
+
+p {
+	font-size: 1vmax;
+	line-height: 1.5;
+	font-family: 'Optima', Fallback, sans-serif;
+}
+
+.titleBanner p {
+	font-size: 1.7vmin;
+	line-height: 1.5;
+}
+
+a {
+	color: #4a6b85;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ ul {
+	list-style-type: circle;
+	line-height: 1.5;
+	list-style-position: inside;
+}
+
+ul a {
+	padding-left: 1.7vmin;
+	font-size: 1.6vmin;
+}
+
+sup {
+	position: fixed;
+	font-size: 0.7em;
+}
+
+/* --------------------------------------------------------------------------- Format the Images and video */
+
+img {
+	max-width: 100%;
+}
+
+.vidPlayButton {
+	display: none;	
+}
+
+#bannerFooterLogo {
+	height: 35%;
+}
+
+.hoverHide:hover {
+	opacity: 0;
+}
+
+.vidImageIcon {
+	width: 60%;
+}
+
+.vidImageIcon:hover {
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+}
+
+/* --------------------------------------------------------------------------- Make sure the body always fills the screen */
+
+body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow: hidden;
+	background-color: lightgray;
+}
+
+/* ----------------------------------------------- Establish the main structure of the page */
+
+main {
+	height: 85%;
+	width: 100%;
+	overflow: hidden;
+	display: none;
+}
+
+footer {
+	height: 15%;
+	width: 100%;
+	background-color: #071b44;
+}
+
+header {
+	height: 10%;
+	width: 100%;
+	z-index: 9000;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+}
+
+#pageLoadMatte {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99000;
+	background-color: #071b44;
+	display: flex;
+	direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#pageLoadMatte img {
+	width: 25%;
+	height: auto;
+}
+
+/* ----------------------------------------------------------------- Format the navigation menu */
+/* Footer */
+
+footer {
+	display: none;
+	flex-direction: column;
+}
+
+#buttonsFooter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 7.5vh;
+}
+
+#bannerFooter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 98vw;
+	flex-grow: 1;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	height: 5.5vh;
+	padding-left: 0.1vw;
+	padding-right: 0.1vw;
+	padding-left: 1vw;
+	z-index: 2000;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.navButton {
+	flex-grow: 1;
+	border: none;
+	color: black;
+	background-color: #3d3935;
+	width: 12.5vw;
+	cursor: pointer;
+	font-size: 1.5vmin;
+	outline-color: #071b44;
+	outline-width: 0.1vw;
+    margin-top: 0.1vw;
+    margin-bottom: 0.1vw;
+    margin-left: 0.05vw;
+    margin-right: 0.05vw;
+	line-height: 1.5;
+	height: 100%;
+	outline-style: solid;
+}
+
+.navButton:hover {
+	color: #fff;
+	background-color: #f1ede1;
+	z-index: 100;
+}
+
+/* ------------------------------------------------------------------------- Format page elements */
+
+header {
+	height: auto;
+	display: none;
+}
+
+/* Popups */
+
+.popup {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: rgba(7, 27, 68, 0.92);
+	display: flex;
+	flex-direction: column;
+	z-index: 1004;
+	/* Hide on startup */
+	display: none;
+	align-items: center;
+}
+
+.popupTitle {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	height: 20%;
+	width: 100%;
+}
+
+.popupContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 70%;
+	width: 55%;
+}
+
+.diPopupContent {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	height: 70%;
+	width: 100%;
+}
+
+
+.diPopupContent .iframeRelative {
+	width: 40vw;
+	height: 22.5vw;
+	margin-bottom: 1vw;
+}
+
+.popupContentBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: auto;
+	width: 50%;
+}
+
+.popupBackButton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-right: 5vmin;
+	background-color: #F1EDE1;
+	border-color: #B79256;
+	border-radius: 0px;
+	color: #B79256;
+	border-style: none;
+	padding: 0px;
+}
+
+.popupBackButton:hover {
+    -webkit-transform:scale(1.07);
+    transform:scale(1.07);
+	cursor: pointer;
+}
+
+.popupBackButton p {
+	margin: 0.5em;
+	font-size: 2vmin;
+}
+
+.goldButtonBox {
+	height: 100%;
+	background-color: #B79256;
+	color: white;
+}
+
+.popupTextContent {
+	width: 96%;
+	color: white;
+	padding: 2%;
+}
+
+.popupContentBox .popupTextContent {
+	width: 76%;
+	padding: 2%;
+}
+
+.imagePopupContentBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 40%;
+	background-color: #F1EDE1;
+	margin-left: 7.5%;
+}
+
+.imagePopupContentBox .popupTextContent {
+	background-color: transparent;
+	color: #071b44;
+}
+
+.clickable {
+	height: 100%;
+	width: 100%;
+}
+
+.popup h3 {
+	font-weight: bold;
+	padding-bottom: 1vh;
+}
+
+.popup h2 {
+	color: white;
+	padding-left: 16vmin;
+	font-weight: bold;
+}
+
+#page7 {
+	display: block;
+}
+
+/* -------------------------------------------------------------------------------------- Partner Content */
+
+/* --------------------------- bottom */
+
+.partnerContent {
+	width: 100%;
+	height: 100%;
+}
+
+.partnerContentDiv {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 0.8em;
+}
+
+.partnerBox {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #071b44;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.partnerBox p {
+	color: white;
+}
+
+#page1Frame .sidebar .partnerBox p {
+	color: white;
+}
+
+.topBox {
+	transition: 0.4s;
+}
+
+.topBox:hover {
+  opacity: 0;
+}
+
+.partnerImage {
+	height: 60%;
+}
+
+/* ------ sidebar */
+
+.sidebar .partnerContent {
+	height: 11vh;
+}
+
+.sidebar .partnerBox {
+	align-items: center;
+}
+
+.sidebar .partnerImage {
+	max-width: 20vw;
+	max-height: 10vh;
+	height: auto;
+	margin-left: 0px;
+}
+
+/* -------------------------------------------------------------------------------------- Responsive Design */
+
+/* Hide mobile elements */
+
+input:checked + .headerMenu {
+  display: none;
+}
+
+.headerMenu {
+  display: none;
+}
+
+#headerLogo {
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+#burgerIcon {
+  display: none;
+}
+
+.vidPlayButton {
+	display: none;
+}
+
+/* Mobile Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	  
+	html {
+  		scroll-behavior: smooth;
+	}
+
+  input:checked + .headerMenu {
+    display: block;
+  }
+
+  .headerMenu {
+    display: block;
+  }
+
+  input {
+    display: block;
+  }
+
+  #burgerIcon {
+    display: block;
+  }
+    
+	 /*-------------------------------------------------Responsive menus*/
+	 
+	footer {
+		display: none;
+	}
+	
+	header {
+		display: flex;
+		position: absolute;
+		align-items: center;
+		justify-content: space-between;
+		top: 0;
+		height: 12vh;
+		width: 100vw;
+	}
+	  
+	#bannerFooterLogo {
+		height: 30%;
+		margin-bottom: 1vh;
+	}
+
+	header #bannerFooterLogo {
+		margin-left: 5vw;
+	}
+
+	  #topMenuButton {
+		 width: 100vw;
+		  display: flex;
+		  align-items: center;
+		justify-content: flex-end;
+		  margin-bottom: 5vh;
+		  margin-top: 5vh;
+		  z-index: 1000;
+	  }
+	  
+	  header #burgerIcon {
+		  font-size: 10vw;
+		  margin-right: 3vh;
+		  color: white;
+	  }
+	  
+	  button {
+		  height: 6vh;
+		  font-size: 3vmin;
+	  }
+	
+	/* Header */
+
+	.headerMenu {
+		display: none;
+		flex-direction: column;
+		width: 100vw;
+		z-index: 100;
+    	position: absolute;
+    	top: 19vw;
+	}
+
+	input:checked  + .headerMenu{
+    	display: flex;
+    	flex-direction: column;
+	}
+  
+	/* ------------------------------------------------- Responsive Text */
+	
+	h1 {
+		font-size: 7vmin;
+	}
+
+	h2 {
+		font-size: 6vmin;
+	}
+
+	h3 {
+		font-size: 5vmin;
+	}
+
+	h4 {
+		font-size: 4vmin;
+	}
+
+	h5 {
+		font-size: 3vmin;
+	}
+
+	p {
+		font-size: 3vmin;
+	}
+
+	#pageLoadMatte img {
+		width: 50%;
+	}
+
+	sup {
+		position: static;
+	}
+	  
+	  
+	/* ---------------------------------------------- Page Content */
+	 
+	#headerBanner {
+		height: 12vh;
+		padding-top: 0.5vh;
+		padding-bottom: 0.5vh;
+		justify-content: center;
+		background-color: #cfcac3;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	
+	#burgerIcon {
+		color: #3d3935;
+		font-size: 7.5vw;
+		cursor: pointer;
+	}
+
+	.menuCheckbox {
+    	position: absolute;
+    	left: -9999px;
+	}
+	
+	.page {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	  
+	  .popup {
+		height: 98vh;
+		margin-bottom: 2vh;
+	  }
+	  
+	  .vidPlayButton {
+		  display: block;
+		  position:absolute;
+		  width: 20vw;
+		  margin: auto;
+		  pointer-events: none;
+	  }
+
+	  .vidImageIcon {
+		  display: none;
+	  }
+
+	  .sidebar .popup {
+		  display: flex;
+		  box-shadow: none;
+		  padding-bottom: 0px;
+		  padding-top: 0px;
+		  margin-bottom: 0px;
+	  }
+
+	  .sidebar .popupTitle {
+		  height: 0px;
+	  }
+
+	  .sidebar .goldButtonBox {
+		  display: none;
+	  }
+
+	  .sidebar .popupContent {
+		  width: 80%;
+	  }
+
+	  .sidebar .popupTextContent {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 2vh;
+	}
+	  .sidebar .iframeRelative {
+		width: 70vw;
+		height: 39.375vw;
+	  }
+	  
+	  .iframeRelative {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+	  }
+	  
+	  .diPopupContent {
+		  flex-direction: column;
+	  }
+
+	  .diPopupContent .popupContentBox {
+		  width: 70vw;
+		  padding-bottom: 3vh;
+	  }
+
+
+
+	/* title */
+	
+	/* Content */
+	
+	  .invisibleText {
+		  display: none;
+	  }
+
+	  /* ------------------------------------------------------------------- Popup */
+	  .popup {
+		  position: static;
+		  height: auto;
+		  padding-top: 2vh;
+		  padding-bottom: 2vh;
+		  background-color:rgba(7, 27, 68, 1);
+		  box-shadow: 5px 5px 10px #aaaaaa;
+	  }
+
+	  .popupContent {
+		  width: 70%;
+		  height: auto;
+	  }
+
+	  .popup .iframeRelative {
+		  width: 70vw;
+		  height: 39.375vw;
+		  padding-top: 1vh;
+		  padding-bottom: 1vh;
+	  }
+
+	  .popupBackButton p {
+		  display: none;
+	  }
+	  
+	  .goldButtonBox {
+		  background-color:rgba(7, 27, 68, 1);
+		  height: auto;
+	  }
+
+	  .goldButtonBox p {
+		display: block;
+		font-size: 6vmin;
+	}
+
+	.popupContentBox .popupTextContent {
+		width: 100%;
+	}
+	  
+	/* --------------------------------------------------------------------- Page 1 */
+	
+	#page1 {
+		position: static;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto;
+	}
+	  
+	/* 	--------------------------------------------------------------------- Page 2 */
+	  
+	#page2 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+    overflow: visible;
+	}
+	  
+	/* --------------------------------------------------------------------- Page 3 */
+	
+	#page3 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+    	overflow: visible;
+	}
+	
+	/* -------------------------------------------------------------------------------------- Format page 4 */
+
+	#page4 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+    
+	/* --------------------------------------------------------------------- Page 5 */
+	
+	#page5 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+	  
+		/* --------------------------------------------------------------------- Page 6 */
+	
+	#page6 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+    
+		/* --------------------------------------------------------------------- Page 7 */
+	  
+	#page7 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+	
+		/* --------------------------------------------------------------------- Page 8 */
+	  
+	#page8 {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+	}
+	
+	/* ---------------------------------------------------------------------- Make the content scroll */
+	
+	body {
+		overflow-y: auto;
+		background-color: #f9f9f9;
+	}
+	
+	main {
+		height: auto;
+	}
+}
+
+/*---------------------------------------------------------------------------------- Landscape Phone */
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 1000px)
+  and (orientation: landscape) { 
+	  
+	  /*----------------------------------------------------------------- popups */
+}
+
+
+/* --------------------------------------------------------------------------------------  Override */
+
+.bold {
+	color: #4a6b85;
+}
+
+.invisibleText {
+	opacity: 0;
+	text-decoration: none;
+	cursor: default;
+}
+
+.invisibleText:hover {
+	opacity: 0;
+	text-decoration: none;
+	cursor: default;
+}
+
+/* ------------------------------------------------------------------------------------ Transitions */
+
+@keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-moz-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-webkit-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-o-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
+  
+  @-ms-keyframes fadeOut {
+	0% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
