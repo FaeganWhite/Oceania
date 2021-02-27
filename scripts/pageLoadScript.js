@@ -89,7 +89,7 @@ function onLoad() {
 					pages[i] = createPage(String(pageData[1]), pageDiv, pageButton, links, butRef);
 
 					// Add the page's css to the header element once the html is loaded
-					$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', "/Oceania/pages/"+pageDiv.id+"/pageStylesheet.css"));
+					$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', "/pages/"+pageDiv.id+"/pageStylesheet.css"));
 
 					// When the page button is clicked
 					pageButton.addEventListener("click",function(){
@@ -148,7 +148,7 @@ function loadPageContent(pageCounter) {
 	if (pageCounter < pages.length) {
 		// Load the corresponding page HTML and CSS in to the page div and call the next page to be loaded in		
 		$(function(){
-			$(pages[pageCounter].div).load("/Oceania/pages/"+pages[pageCounter].name+"/index.html", function() {
+			$(pages[pageCounter].div).load("/pages/"+pages[pageCounter].name+"/index.html", function() {
 				// If this was the first page to be loaded
 				if (pageCounter == 0) {
 					// Load any partner content for the first site
