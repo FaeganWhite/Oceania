@@ -163,6 +163,8 @@ function loadPageContent(pageCounter) {
 	} else {
 		// Once all the pages have been loaded, load in the partner content for all the other pages
 		loadPartnerContent();
+		// Reveal all the pages so that they can load in the background
+		$(".page").show();
 	}
 }
 
